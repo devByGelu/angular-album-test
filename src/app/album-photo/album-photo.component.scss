@@ -1,0 +1,73 @@
+.album__photo__container {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  position: relative;
+}
+
+.album__photo__overlay {
+  width: 100%;
+  height: 50%;
+  background: rgb(23, 25, 28);
+  background: linear-gradient(
+    180deg,
+    rgba(23, 25, 28, 1) 0%,
+    rgba(28, 34, 37, 1) 7%,
+    rgba(61, 86, 93, 0) 100%
+  );
+}
+
+.album__photo__overlay {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  background: rgb(23, 25, 28);
+  background: linear-gradient(
+    180deg,
+    rgba(23, 25, 28, 1) 0%,
+    rgba(28, 34, 37, 1) 7%,
+    rgba(61, 86, 93, 0) 100%
+  );
+}
+
+.album__photo__overlay__top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  padding-top: 20px;
+}
+
+.album__photo__overlay__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  padding-bottom: 20px;
+}
+.album__photo__overlay__top__first {
+  display: flex;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+.album__photo__overlay__top__second {
+  margin-top: 10px;
+  color: white;
+}
+
+.album__photo__overlay__top__text {
+  font-weight: bolder;
+  font-size: 20px;
+  cursor: default;
+  margin-left: 15px;
+}
+
+.album__photo__overlay__top__icon {
+  height: 30px;
+  width: 30px;
+}

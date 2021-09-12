@@ -1,0 +1,29 @@
+<div
+  class="album__photo__container"
+  [ngStyle]="{ 'background-image': 'url(' + item?.imgUrl + ')' }"
+  (mouseenter)="setShowOverlay(true)"
+  (mouseleave)="setShowOverlay(false)"
+  (mouseup)="setShowOverlay(true)"
+  (mousedown)="handleMouseDown()"
+>
+  <div [@overlayState]="showOverlay">
+    <div class="album__photo__overlay"></div>
+    <div class="album__photo__overlay__top">
+      <div class="album__photo__overlay__top__first">
+        <img class="album__photo__overlay__top__icon" src="assets/drag.png" />
+        <div class="album__photo__overlay__top__text">Drag</div>
+      </div>
+      <div class="album__photo__overlay__top__second">To change position</div>
+    </div>
+    <div class="album__photo__overlay__bottom">
+      <button
+        mat-mini-fab
+        aria-label="Example icon button with a delete icon"
+        color="warn"
+        (click)="deleteItem(item)"
+      >
+        <mat-icon color="white">delete_outline</mat-icon>
+      </button>
+    </div>
+  </div>
+</div>
